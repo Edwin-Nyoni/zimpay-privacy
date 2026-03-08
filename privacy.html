@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZimPay+ — Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --green: #006400;
+      --green-pale: #E6F4EA;
+      --red: #E53E3E;
+      --dark: #0D1F0D;
+      --grey: #718096;
+      --bg: #F4F9F4;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+    }
+
+    /* NAV */
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 40px;
+      background: white;
+      border-bottom: 1px solid rgba(0,100,0,0.08);
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem; font-weight: 800;
+      color: var(--green); text-decoration: none;
+    }
+    .nav-logo span { color: var(--red); }
+    .nav-back {
+      color: var(--green); font-size: 0.9rem; font-weight: 500;
+      text-decoration: none;
+    }
+    .nav-back:hover { text-decoration: underline; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--green) 0%, #003d00 100%);
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.2rem; font-weight: 800;
+      color: white; letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: #FFD200; }
+    .hero p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1rem;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white; padding: 6px 16px;
+      border-radius: 100px; font-size: 0.82rem;
+      margin-bottom: 20px;
+    }
+
+    /* SUMMARY BOX */
+    .summary {
+      max-width: 760px; margin: 40px auto 0;
+      background: white; border-radius: 16px;
+      padding: 24px 32px;
+      border-left: 4px solid var(--green);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .summary p {
+      font-size: 1rem; color: var(--dark);
+      line-height: 1.7;
+    }
+    .summary strong { color: var(--green); }
+
+    /* CONTENT */
+    .content {
+      max-width: 760px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+    }
+    .section {
+      background: white; border-radius: 16px;
+      padding: 28px 32px; margin-bottom: 16px;
+      border: 1.5px solid rgba(0,0,0,0.06);
+    }
+    .section h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--green); margin-bottom: 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section p {
+      font-size: 0.95rem; color: #4A5568;
+      line-height: 1.8; margin-bottom: 10px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul {
+      list-style: none; padding: 0;
+    }
+    .section ul li {
+      font-size: 0.95rem; color: #4A5568;
+      line-height: 1.7; padding: 6px 0;
+      padding-left: 20px; position: relative;
+    }
+    .section ul li::before {
+      content: '•';
+      color: var(--green);
+      position: absolute; left: 0;
+      font-weight: 700;
+    }
+    .section ul li strong { color: var(--dark); }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.5);
+      padding: 32px 40px;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem; font-weight: 700; color: white;
+    }
+    .footer-logo span { color: var(--red); }
+    footer p { font-size: 0.82rem; }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer a:hover { color: white; }
+
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      .hero { padding: 40px 20px; }
+      .hero h1 { font-size: 1.6rem; }
+      .summary { margin: 24px 16px 0; padding: 20px; }
+      .content { margin: 24px auto 60px; }
+      .section { padding: 20px; }
+      footer { padding: 24px 20px; flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">ZimPay<span>+</span></a>
+  <a href="/" class="nav-back">← Back to Home</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Last updated: March 2026</div>
+  <h1>Privacy <span>Policy</span></h1>
+  <p>ZimPay+ v1.4.0 — Your data stays on your device. Always.</p>
+</section>
+
+<!-- SUMMARY -->
+<div class="summary">
+  <p><strong>Short version:</strong> ZimPay+ processes your mobile money messages only on your device. We never collect, store, or share your data with anyone. Everything stays on your phone.</p>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <div class="section">
+    <h2>1. Introduction</h2>
+    <p>ZimPay+ ("the App") is a personal finance tool that helps you track your mobile money transactions automatically. This Privacy Policy explains how we handle your information. We are committed to protecting your privacy — by design, not just by policy.</p>
+  </div>
+
+  <div class="section">
+    <h2>2. Information We Access</h2>
+    <p>The App requests access to the following on your device:</p>
+    <ul>
+      <li><strong>SMS Messages</strong> — to read mobile money transaction confirmation messages so we can display your transaction history, balance, and spending summaries.</li>
+      <li><strong>Notifications</strong> — to send you spending alerts and summaries that you configure within the App.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>3. How We Use Your Information</h2>
+    <ul>
+      <li>SMS data is read and processed <strong>entirely on your device</strong>.</li>
+      <li>Transaction data is used only to display your history, balances, and analytics within the App.</li>
+      <li>Exported reports (PDF/Excel) are generated on your device and shared only when you choose to share them.</li>
+      <li>Notifications are generated locally based on thresholds you set.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>4. Data Storage</h2>
+    <p>ZimPay+ does <strong>not</strong> use any servers, cloud storage, or databases. All data is processed in memory and never written to permanent storage outside your device.</p>
+  </div>
+
+  <div class="section">
+    <h2>5. Data Sharing</h2>
+    <p>We do <strong>not</strong> share, sell, rent, or transmit your personal data to any third party. Your messages and transaction data never leave your device unless you explicitly export and share a report yourself.</p>
+  </div>
+
+  <div class="section">
+    <h2>6. Third-Party Services</h2>
+    <p>The App does not integrate with any third-party analytics, advertising, or tracking services. There are no ads in ZimPay+.</p>
+  </div>
+
+  <div class="section">
+    <h2>7. Permissions Explained</h2>
+    <ul>
+      <li><strong>READ_SMS</strong> — Required to read mobile money confirmation messages. Without this, the App cannot function.</li>
+      <li><strong>POST_NOTIFICATIONS</strong> — Required to deliver spending alerts you configure. You can disable this at any time in your device settings.</li>
+      <li><strong>VIBRATE</strong> — Used for notification feedback only.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>8. Children's Privacy</h2>
+    <p>ZimPay+ is not directed at children under the age of 13. We do not knowingly collect any information from children.</p>
+  </div>
+
+  <div class="section">
+    <h2>9. Security</h2>
+    <p>Since all data is processed locally on your device and never transmitted, your information is protected by your device's own security (PIN, fingerprint, etc.). We recommend keeping your device secure and up to date.</p>
+  </div>
+
+  <div class="section">
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated date. We encourage you to review this policy periodically.</p>
+  </div>
+
+  <div class="section">
+    <h2>11. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or the App, please contact us at: <strong>zimpayplus@gmail.com</strong></p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">ZimPay<span>+</span></div>
+  <p>© 2026 ZimPay+. All rights reserved.</p>
+  <a href="/">← Back to Home</a>
+</footer>
+
+</body>
+</html>
