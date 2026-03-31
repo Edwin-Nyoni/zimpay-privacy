@@ -112,7 +112,7 @@
       padding-left: 20px; position: relative;
     }
     .section ul li::before {
-      content: '•';
+      content: '\2022';
       color: var(--green);
       position: absolute; left: 0;
       font-weight: 700;
@@ -152,19 +152,19 @@
 <!-- NAV -->
 <nav>
   <a href="/" class="nav-logo">ZimPay<span>+</span></a>
-  <a href="/" class="nav-back">← Back to Home</a>
+  <a href="/" class="nav-back">&larr; Back to Home</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-badge">Last updated: March 2026</div>
   <h1>Privacy <span>Policy</span></h1>
-  <p>ZimPay+ v1.5.1 — Your data stays on your device. Always.</p>
+  <p>ZimPay+ v1.6.5 &mdash; Your data stays on your device. Always.</p>
 </section>
 
 <!-- SUMMARY -->
 <div class="summary">
-  <p><strong>Short version:</strong> ZimPay+ processes your mobile money messages only on your device. We never collect, store, or share your data with anyone. Everything stays on your phone.</p>
+  <p><strong>Short version:</strong> ZimPay+ processes your mobile money messages only on your device. We never collect, transmit, or share your data with anyone. Everything stays on your phone.</p>
 </div>
 
 <!-- CONTENT -->
@@ -172,15 +172,18 @@
 
   <div class="section">
     <h2>1. Introduction</h2>
-    <p>ZimPay+ ("the App") is a personal finance tool developed by ZimPay+, based in Zimbabwe, that helps you track your mobile money transactions automatically. This Privacy Policy explains how we handle your information. We are committed to protecting your privacy — by design, not just by policy.</p>
+    <p>ZimPay+ ("the App") is a personal finance tool developed by ZimPay+, based in Zimbabwe, that helps you track your mobile money transactions automatically. This Privacy Policy explains how we handle your information. We are committed to protecting your privacy &mdash; by design, not just by policy.</p>
   </div>
 
   <div class="section">
     <h2>2. Information We Access</h2>
     <p>The App requests access to the following on your device:</p>
     <ul>
-      <li><strong>SMS Messages</strong> — The app reads SMS message metadata and text locally, solely to identify mobile money transaction confirmations from EcoCash (+263164USD) and Econet Bundles (+263143). No other SMS messages are accessed or stored.</li>
-      <li><strong>Notifications</strong> — to send you spending alerts and summaries that you configure within the App.</li>
+      <li><strong>SMS Messages</strong> &mdash; The App reads SMS messages locally on your device, solely to identify mobile money transaction confirmations from the following senders:
+        <br/>&bull; <strong>EcoCash</strong> &mdash; messages from sender numbers containing 263164 (e.g. +263164USD)
+        <br/>&bull; <strong>InnBucks</strong> &mdash; messages from the sender ID "InnBucks"
+        <br/>Only messages from these two senders are processed. All other SMS messages are ignored and never read, stored, or accessed in any way.</li>
+      <li><strong>Notifications</strong> &mdash; to send you spending alerts and summaries that you configure within the App.</li>
     </ul>
   </div>
 
@@ -188,7 +191,7 @@
     <h2>3. How We Use Your Information</h2>
     <ul>
       <li>SMS data is read and processed <strong>entirely on your device</strong>.</li>
-      <li>Transaction data is used only to display your history, balances, and analytics within the App.</li>
+      <li>Transaction data is parsed from SMS messages and stored in a local database on your device to provide your transaction history, balances, and analytics.</li>
       <li>Exported reports (PDF/Excel) are generated on your device and shared only when you choose to share them.</li>
       <li>Notifications are generated locally based on thresholds you set.</li>
     </ul>
@@ -196,25 +199,27 @@
 
   <div class="section">
     <h2>4. Data Storage</h2>
-    <p>ZimPay+ does <strong>not</strong> use any servers, cloud storage, or databases. All data is processed in memory and never written to permanent storage outside your device.</p>
+    <p>ZimPay+ stores your parsed transaction data in a <strong>local database on your device</strong> (SQLite). This allows the App to retain your transaction history even if SMS messages are deleted from your inbox. No data is stored on any external server, cloud service, or remote database. Your data never leaves your device unless you explicitly choose to export and share a report.</p>
   </div>
 
   <div class="section">
     <h2>5. Data Sharing</h2>
-    <p>We do <strong>not</strong> share, sell, rent, or transmit your personal data to any third party. Data is not shared with third parties unless the user explicitly chooses to export or consent to external services. Your messages and transaction data never leave your device unless you explicitly export and share a report yourself.</p>
+    <p>We do <strong>not</strong> share, sell, rent, or transmit your personal data to any third party. Your messages and transaction data never leave your device unless you explicitly export and share a report yourself.</p>
   </div>
 
   <div class="section">
     <h2>6. Third-Party Services</h2>
-    <p>The App does not integrate with any third-party analytics, advertising, or tracking services. There are no ads in ZimPay+.</p>
+    <p>The App does not integrate with any third-party analytics, advertising, or tracking services. No data is sent to external servers.</p>
   </div>
 
   <div class="section">
     <h2>7. Permissions Explained</h2>
     <ul>
-      <li><strong>READ_SMS</strong> — Required to read mobile money confirmation messages. Without this, the App cannot function.</li>
-      <li><strong>POST_NOTIFICATIONS</strong> — Required to deliver spending alerts you configure. You can disable this at any time in your device settings.</li>
-      <li><strong>VIBRATE</strong> — Used for notification feedback only.</li>
+      <li><strong>READ_SMS</strong> &mdash; Required to read mobile money confirmation messages from EcoCash and InnBucks. Without this, the App cannot function.</li>
+      <li><strong>POST_NOTIFICATIONS</strong> &mdash; Required to deliver spending alerts you configure. You can disable this at any time in your device settings.</li>
+      <li><strong>RECEIVE_BOOT_COMPLETED</strong> &mdash; Allows the App to restore scheduled alert checks after your device restarts.</li>
+      <li><strong>SCHEDULE_EXACT_ALARM</strong> &mdash; Used to schedule precise alert checks for spending limits and low balance warnings.</li>
+      <li><strong>VIBRATE</strong> &mdash; Used for notification feedback only.</li>
     </ul>
   </div>
 
@@ -225,7 +230,7 @@
 
   <div class="section">
     <h2>9. Security</h2>
-    <p>Since all data is processed locally on your device and never transmitted, your information is protected by your device's own security (PIN, fingerprint, etc.). We recommend keeping your device secure and up to date.</p>
+    <p>All data is processed and stored locally on your device and is never transmitted over the internet. Your information is protected by your device's own security (PIN, fingerprint, encryption, etc.). We recommend keeping your device secure and up to date.</p>
   </div>
 
   <div class="section">
@@ -235,12 +240,17 @@
 
   <div class="section">
     <h2>11. Data Retention</h2>
-    <p>ZimPay+ does not retain any data beyond your current session. All transaction data is read from your device's SMS inbox each time you open the App and is never written to any external or persistent storage. Deleting the App removes all locally cached data.</p>
+    <p>ZimPay+ stores your transaction history in a local database on your device so that your financial records are preserved even if the original SMS messages are deleted. This data is never transmitted to any external server. Uninstalling the App removes all stored data from your device. You can also clear all stored data at any time from the Settings screen within the App.</p>
   </div>
 
   <div class="section">
     <h2>12. Your Rights</h2>
-    <p>Since ZimPay+ does not collect or store any personal data on external servers, there is no data to request, correct, or delete on our end. You are in full control of your data at all times. You may revoke SMS or notification permissions at any time through your device settings, which will limit the App's functionality.</p>
+    <p>Since ZimPay+ does not collect or store any personal data on external servers, there is no data to request, correct, or delete on our end. You are in full control of your data at all times. You may:</p>
+    <ul>
+      <li>Revoke SMS or notification permissions at any time through your device settings</li>
+      <li>Clear all stored transaction data from the Settings screen within the App</li>
+      <li>Uninstall the App to remove all data from your device</li>
+    </ul>
   </div>
 
   <div class="section">
@@ -252,4 +262,9 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">ZimPay<span
+  <div class="footer-logo">ZimPay<span>+</span></div>
+  <p>&copy; 2026 ZimPay+. All rights reserved. | <a href="/privacy.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
