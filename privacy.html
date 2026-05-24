@@ -159,7 +159,7 @@
 <section class="hero">
   <div class="hero-badge">Last updated: May 2026</div>
   <h1>Privacy <span>Policy</span></h1>
-  <p>ZimPay+ v1.6.9 &mdash; Your data stays on your device. Always.</p>
+  <p>ZimPay+ v1.6.10 &mdash; Your data stays on your device. Always.</p>
 </section>
 
 <!-- SUMMARY -->
@@ -208,8 +208,19 @@
   </div>
 
   <div class="section">
-    <h2>6. Third-Party Services</h2>
-    <p>The App does not integrate with any third-party analytics, advertising, or tracking services. No data is sent to external servers.</p>
+    <h2>6. Third-Party Services — Firebase (Google)</h2>
+    <p>Starting from v1.6.10, ZimPay+ uses two Firebase services provided by Google to help us improve the app:</p>
+    <ul>
+      <li><strong>Firebase Analytics</strong> &mdash; collects anonymous usage data such as screen views, session duration, and general app interactions. This helps us understand how users use the app so we can improve it.</li>
+      <li><strong>Firebase Crashlytics</strong> &mdash; collects anonymous crash reports when the app encounters an error. Reports include device type, Android version, app version, and the error that caused the crash.</li>
+    </ul>
+    <p>Firebase does <strong>not</strong> collect any of the following:</p>
+    <ul>
+      <li>Your SMS messages or their contents</li>
+      <li>Your transaction history, balances, or financial data</li>
+      <li>Your name, phone number, or any personally identifying information</li>
+    </ul>
+    <p>All Firebase data is anonymous and cannot be linked back to you as an individual. Data collected by Firebase is processed by Google in accordance with <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--green)">Google's Privacy Policy</a>. ZimPay+ does not use Firebase data for advertising or marketing purposes.</p>
   </div>
 
   <div class="section">
@@ -230,7 +241,9 @@
 
   <div class="section">
     <h2>9. Security</h2>
-    <p>All data is processed and stored locally on your device and is never transmitted over the internet. Your information is protected by your device's own security (PIN, fingerprint, encryption, etc.). We recommend keeping your device secure and up to date.</p>
+    <p>Your SMS messages and transaction data are processed and stored <strong>locally on your device only</strong> and are never transmitted over the internet. Your financial information never leaves your phone.</p>
+    <p>Anonymous crash reports and app usage data collected by Firebase are transmitted securely over HTTPS (encrypted in transit) to Google's Firebase servers. This data contains no personal or financial information.</p>
+    <p>Your information is protected by your device's own security (PIN, fingerprint, encryption, etc.). We recommend keeping your device secure and up to date.</p>
   </div>
 
   <div class="section">
@@ -245,12 +258,13 @@
 
   <div class="section">
     <h2>12. Your Rights</h2>
-    <p>Since ZimPay+ does not collect or store any personal data on external servers, there is no data to request, correct, or delete on our end. You are in full control of your data at all times. You may:</p>
+    <p>Your SMS messages and transaction data are stored only on your device — there is no personal data to request, correct, or delete on our end. You are in full control of your data at all times. You may:</p>
     <ul>
       <li>Revoke SMS or notification permissions at any time through your device settings</li>
       <li>Clear all stored transaction data from the Settings screen within the App</li>
       <li>Uninstall the App to remove all data from your device</li>
     </ul>
+    <p>Anonymous crash and analytics data collected by Firebase is not linked to you personally and cannot be individually retrieved or deleted. For information on Google's data practices, see <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--green)">Google's Privacy Policy</a>.</p>
   </div>
 
   <div class="section">
