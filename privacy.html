@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ZimPay+ — Privacy Policy</title>
+  <title>ZivaPay+ — Privacy Policy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
@@ -112,7 +112,7 @@
       padding-left: 20px; position: relative;
     }
     .section ul li::before {
-      content: '\2022';
+      content: '•';
       color: var(--green);
       position: absolute; left: 0;
       font-weight: 700;
@@ -151,20 +151,20 @@
 
 <!-- NAV -->
 <nav>
-  <a href="/" class="nav-logo">ZimPay<span>+</span></a>
-  <a href="/" class="nav-back">&larr; Back to Home</a>
+  <a href="/" class="nav-logo">ZivaPay<span>+</span></a>
+  <a href="/" class="nav-back">← Back to Home</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">Last updated: May 2026</div>
+  <div class="hero-badge">Last updated: June 2026</div>
   <h1>Privacy <span>Policy</span></h1>
-  <p>ZimPay+ v1.6.10 &mdash; Your data stays on your device. Always.</p>
+  <p>ZivaPay+ — your mobile money messages stay on your device.</p>
 </section>
 
 <!-- SUMMARY -->
 <div class="summary">
-  <p><strong>Short version:</strong> ZimPay+ processes your mobile money messages only on your device. We never collect, transmit, or share your data with anyone. Everything stays on your phone.</p>
+  <p><strong>Short version:</strong> ZivaPay+ reads your mobile money messages <strong>only on your phone</strong> — the message content and your transactions never leave your device and are never sent to us or anyone else. To keep the app stable and improve it, we use Google Firebase to collect anonymous app-usage and crash information that <strong>never includes your messages, balances, or transaction amounts</strong>. There are no ads, and no advertising ID.</p>
 </div>
 
 <!-- CONTENT -->
@@ -172,112 +172,108 @@
 
   <div class="section">
     <h2>1. Introduction</h2>
-    <p>ZimPay+ ("the App") is a personal finance tool developed by ZimPay+, based in Zimbabwe, that helps you track your mobile money transactions automatically. This Privacy Policy explains how we handle your information. We are committed to protecting your privacy &mdash; by design, not just by policy.</p>
+    <p>ZivaPay+ ("the App", "we", "us") is a personal finance tool that helps you track your mobile money transactions automatically. This Privacy Policy explains what the App accesses, what it keeps on your device, and the limited, anonymous information we use to keep the App working well. We are committed to protecting your privacy — by design, not just by policy.</p>
+    <p>The App is operated by Neyoni Technologies (Pvt) Ltd, Zimbabwe.</p>
   </div>
 
   <div class="section">
-    <h2>2. Information We Access</h2>
-    <p>The App requests access to the following on your device:</p>
+    <h2>2. Information the App Accesses on Your Device</h2>
+    <p>The App requests the following so it can do its job:</p>
     <ul>
-      <li><strong>SMS Messages</strong> &mdash; The App reads SMS messages locally on your device, solely to identify mobile money transaction confirmations from the following senders:
-        <br/>&bull; <strong>EcoCash</strong> &mdash; messages from sender numbers containing 263164 (e.g. +263164USD)
-        <br/>&bull; <strong>InnBucks</strong> &mdash; messages from the sender ID "InnBucks"
-        <br/>Only messages from these two senders are processed. All other SMS messages are ignored and never read, stored, or accessed in any way.</li>
-      <li><strong>Notifications</strong> &mdash; to send you spending alerts and summaries that you configure within the App.</li>
+      <li><strong>SMS messages</strong> — the App reads mobile money confirmation messages (e.g. EcoCash, InnBucks) on your phone to display your transaction history, balances, and spending summaries. It looks only for these financial messages; ordinary personal texts are ignored.</li>
+      <li><strong>Notifications</strong> — to show spending alerts and reminders you choose to enable in the App.</li>
+    </ul>
+    <p>This information is processed <strong>entirely on your device</strong> and is not transmitted to us.</p>
+  </div>
+
+  <div class="section">
+    <h2>3. How Your Transaction Information Is Used</h2>
+    <ul>
+      <li>Your mobile money messages are read and analysed <strong>on your device only</strong>.</li>
+      <li>The resulting transaction data is used to display your history, balances, analytics, and money-tracking features inside the App.</li>
+      <li>Exported reports (PDF / Excel) are generated on your device and are shared only when <strong>you</strong> choose to export and share them.</li>
+      <li>Notifications and reminders are generated locally based on settings you choose.</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>3. How We Use Your Information</h2>
+    <h2>4. Where Your Data Is Stored</h2>
+    <p>Your messages and transaction records are stored in a private database <strong>on your device</strong>. We do <strong>not</strong> upload, back up, or store your transactions, balances, or message content on any server or in the cloud.</p>
+    <p>You stay in control: clearing the App's data or uninstalling the App permanently removes all of this on-device information.</p>
+  </div>
+
+  <div class="section">
+    <h2>5. Analytics &amp; Crash Reporting (Google Firebase)</h2>
+    <p>To keep the App stable and understand which features are useful, the App uses <strong>Google Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong>. These collect limited, anonymous information:</p>
     <ul>
-      <li>SMS data is read and processed <strong>entirely on your device</strong>.</li>
-      <li>Transaction data is parsed from SMS messages and stored in a local database on your device to provide your transaction history, balances, and analytics.</li>
-      <li>Exported reports (PDF/Excel) are generated on your device and shared only when you choose to share them.</li>
-      <li>Notifications are generated locally based on thresholds you set.</li>
+      <li><strong>App-interaction events</strong> — e.g. which screens are opened and which features are used, in a general (grouped) form.</li>
+      <li><strong>Crash logs &amp; diagnostics</strong> — technical details about errors and your device (such as device model and Android version) that help us fix problems.</li>
+      <li><strong>A device identifier</strong> used by Firebase to group events from the same installation.</li>
+    </ul>
+    <p>This information <strong>never includes the content of your messages, your contacts, your balances, or your transaction amounts</strong>. The App does <strong>not</strong> use an advertising ID, does not show ads, and does not work with any ad networks. This Firebase data is processed by Google as our service provider, in line with Google's privacy terms.</p>
+  </div>
+
+  <div class="section">
+    <h2>6. Data Sharing</h2>
+    <p>We do <strong>not</strong> sell, rent, or trade your personal data. Your mobile money messages and transaction records never leave your device.</p>
+    <p>The only information shared with a third party is the anonymous analytics and crash-diagnostic data described in Section 5, which is sent to Google Firebase to keep the App working and improving. We may also disclose information if required to do so by law.</p>
+  </div>
+
+  <div class="section">
+    <h2>7. Third-Party Services</h2>
+    <p>The App uses Google Firebase (Analytics and Crashlytics) for anonymous usage statistics and crash reporting. It does <strong>not</strong> integrate any advertising networks or ad-tracking services, and there are no ads in ZivaPay+.</p>
+  </div>
+
+  <div class="section">
+    <h2>8. Permissions Explained</h2>
+    <ul>
+      <li><strong>READ_SMS</strong> — required to read mobile money confirmation messages. Without it, the App cannot track your transactions.</li>
+      <li><strong>POST_NOTIFICATIONS</strong> — to deliver the spending alerts and reminders you enable. You can turn these off any time in your device settings.</li>
+      <li><strong>SCHEDULE_EXACT_ALARM</strong> — to deliver scheduled reminders and summaries at the right time.</li>
+      <li><strong>RECEIVE_BOOT_COMPLETED</strong> — to restore your scheduled reminders after your phone restarts.</li>
+      <li><strong>VIBRATE</strong> — for notification feedback only.</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>4. Data Storage</h2>
-    <p>ZimPay+ stores your parsed transaction data in a <strong>local database on your device</strong> (SQLite). This allows the App to retain your transaction history even if SMS messages are deleted from your inbox. No data is stored on any external server, cloud service, or remote database. Your data never leaves your device unless you explicitly choose to export and share a report.</p>
-  </div>
-
-  <div class="section">
-    <h2>5. Data Sharing</h2>
-    <p>We do <strong>not</strong> share, sell, rent, or transmit your personal data to any third party. Your messages and transaction data never leave your device unless you explicitly export and share a report yourself.</p>
-  </div>
-
-  <div class="section">
-    <h2>6. Third-Party Services — Firebase (Google)</h2>
-    <p>Starting from v1.6.10, ZimPay+ uses two Firebase services provided by Google to help us improve the app:</p>
+    <h2>9. Your Data Protection Rights (Zimbabwe)</h2>
+    <p>We process personal information in line with Zimbabwe's <strong>Cyber and Data Protection Act [Chapter 12:07]</strong>, which is overseen by the data protection authority, the <strong>Postal and Telecommunications Regulatory Authority of Zimbabwe (POTRAZ)</strong>.</p>
+    <p>Because your messages and transactions are kept on your own device, you remain in direct control of that information. In particular, you can:</p>
     <ul>
-      <li><strong>Firebase Analytics</strong> &mdash; collects anonymous usage data such as screen views, session duration, and general app interactions. This helps us understand how users use the app so we can improve it.</li>
-      <li><strong>Firebase Crashlytics</strong> &mdash; collects anonymous crash reports when the app encounters an error. Reports include device type, Android version, app version, and the error that caused the crash.</li>
+      <li><strong>Access and review</strong> your transaction data at any time within the App.</li>
+      <li><strong>Correct or remove</strong> records, or delete everything, by clearing the App's data or uninstalling it.</li>
+      <li><strong>Limit analytics</strong> by disabling usage and diagnostics collection in your device settings.</li>
     </ul>
-    <p>Firebase does <strong>not</strong> collect any of the following:</p>
-    <ul>
-      <li>Your SMS messages or their contents</li>
-      <li>Your transaction history, balances, or financial data</li>
-      <li>Your name, phone number, or any personally identifying information</li>
-    </ul>
-    <p>All Firebase data is anonymous and cannot be linked back to you as an individual. Data collected by Firebase is processed by Google in accordance with <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--green)">Google's Privacy Policy</a>. ZimPay+ does not use Firebase data for advertising or marketing purposes.</p>
+    <p>For any data-protection question or request, contact us using the details in Section 12. The data controller is Neyoni Technologies (Pvt) Ltd, Zimbabwe.</p>
   </div>
 
   <div class="section">
-    <h2>7. Permissions Explained</h2>
-    <ul>
-      <li><strong>READ_SMS</strong> &mdash; Required to read mobile money confirmation messages from EcoCash and InnBucks. Without this, the App cannot function.</li>
-      <li><strong>POST_NOTIFICATIONS</strong> &mdash; Required to deliver spending alerts you configure. You can disable this at any time in your device settings.</li>
-      <li><strong>RECEIVE_BOOT_COMPLETED</strong> &mdash; Allows the App to restore scheduled alert checks after your device restarts.</li>
-      <li><strong>SCHEDULE_EXACT_ALARM</strong> &mdash; Used to schedule precise alert checks for spending limits and low balance warnings.</li>
-      <li><strong>VIBRATE</strong> &mdash; Used for notification feedback only.</li>
-    </ul>
+    <h2>10. Children's Privacy</h2>
+    <p>ZivaPay+ is not directed at children under the age of 13, and we do not knowingly collect information from children.</p>
   </div>
 
   <div class="section">
-    <h2>8. Children's Privacy</h2>
-    <p>ZimPay+ is not directed at children under the age of 13. We do not knowingly collect any information from children.</p>
+    <h2>11. Security</h2>
+    <p>Your messages and transactions are kept on your device and protected by your device's own security (PIN, fingerprint, etc.). The anonymous analytics and crash data sent to Firebase is transmitted over encrypted connections. We recommend keeping your device locked and your software up to date.</p>
   </div>
 
   <div class="section">
-    <h2>9. Security</h2>
-    <p>Your SMS messages and transaction data are processed and stored <strong>locally on your device only</strong> and are never transmitted over the internet. Your financial information never leaves your phone.</p>
-    <p>Anonymous crash reports and app usage data collected by Firebase are transmitted securely over HTTPS (encrypted in transit) to Google's Firebase servers. This data contains no personal or financial information.</p>
-    <p>Your information is protected by your device's own security (PIN, fingerprint, encryption, etc.). We recommend keeping your device secure and up to date.</p>
+    <h2>12. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or the App, contact us at: <strong>hello@zivapayplus.com</strong></p>
   </div>
 
   <div class="section">
-    <h2>10. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated date. We encourage you to review this policy periodically.</p>
-  </div>
-
-  <div class="section">
-    <h2>11. Data Retention</h2>
-    <p>ZimPay+ stores your transaction history in a local database on your device so that your financial records are preserved even if the original SMS messages are deleted. This data is never transmitted to any external server. Uninstalling the App removes all stored data from your device. You can also clear all stored data at any time from the Settings screen within the App.</p>
-  </div>
-
-  <div class="section">
-    <h2>12. Your Rights</h2>
-    <p>Your SMS messages and transaction data are stored only on your device — there is no personal data to request, correct, or delete on our end. You are in full control of your data at all times. You may:</p>
-    <ul>
-      <li>Revoke SMS or notification permissions at any time through your device settings</li>
-      <li>Clear all stored transaction data from the Settings screen within the App</li>
-      <li>Uninstall the App to remove all data from your device</li>
-    </ul>
-    <p>Anonymous crash and analytics data collected by Firebase is not linked to you personally and cannot be individually retrieved or deleted. For information on Google's data practices, see <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--green)">Google's Privacy Policy</a>.</p>
-  </div>
-
-  <div class="section">
-    <h2>13. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy or the App, please contact us at: <strong>hello@zimpayplus.com</strong></p>
+    <h2>13. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be shown on this page with an updated date. Please review this policy periodically.</p>
   </div>
 
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">ZimPay<span>+</span></div>
-  <p>&copy; 2026 ZimPay+. All rights reserved. | <a href="/privacy.html">Privacy Policy</a></p>
+  <div class="footer-logo">ZivaPay<span>+</span></div>
+  <p>© 2026 ZivaPay+ · Neyoni Technologies (Pvt) Ltd</p>
+  <a href="/">← Back to Home</a>
 </footer>
 
 </body>
