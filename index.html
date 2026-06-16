@@ -195,6 +195,140 @@
       border-color: rgba(183,121,31,0.2);
     }
 
+    /* TRUST + HOW IT WORKS */
+    .trust {
+      padding: 90px 80px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,210,0,0.10) 0%, transparent 28%),
+        linear-gradient(135deg, var(--dark) 0%, #073607 100%);
+      color: white;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 48px;
+      align-items: center;
+    }
+    .trust .section-label { color: var(--yellow); }
+    .trust-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+    .trust-copy {
+      color: rgba(255,255,255,0.72);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 560px;
+    }
+    .trust-points {
+      display: grid;
+      gap: 14px;
+    }
+    .trust-point {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 18px;
+    }
+    .trust-point span {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255,210,0,0.14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .trust-point strong {
+      display: block;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.98rem;
+      margin-bottom: 4px;
+    }
+    .trust-point p {
+      color: rgba(255,255,255,0.62);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .how-it-works {
+      padding: 90px 80px;
+      background: var(--bg);
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .step-card {
+      background: white;
+      border: 1.5px solid rgba(0,0,0,0.07);
+      border-radius: 22px;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    .step-number {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.85rem;
+      color: var(--green);
+      background: var(--green-pale);
+      border: 1px solid rgba(0,100,0,0.12);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+    .step-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+    .step-card p {
+      color: var(--grey);
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+    .proof {
+      padding: 48px 80px;
+      background: white;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .proof-item {
+      padding: 22px;
+      border-radius: 18px;
+      background: var(--bg);
+      border: 1px solid rgba(0,100,0,0.08);
+    }
+    .proof-value {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+    .proof-label {
+      color: var(--grey);
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
     /* FEATURES */
     .features { padding: 100px 80px; background: white; }
     .section-label {
@@ -466,6 +600,12 @@
       .phone-right { right: -90px; }
       .features { padding: 60px 24px; }
       .features-grid { grid-template-columns: 1fr; }
+      .trust { padding: 60px 24px; }
+      .trust-grid { grid-template-columns: 1fr; }
+      .how-it-works { padding: 60px 24px; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .proof { padding: 32px 24px; }
+      .proof-grid { grid-template-columns: 1fr 1fr; }
       .screenshots { padding: 60px 24px; }
       .wallet { padding: 60px 24px; }
       .download { padding: 60px 24px; }
@@ -473,6 +613,9 @@
       nav { padding: 16px 24px; }
       footer { padding: 32px 24px; flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
+    }
+    @media (max-width: 500px) {
+      .proof-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -529,6 +672,85 @@
     <div class="platform-chip">✅ EcoCash</div>
     <div class="platform-chip">✅ InnBucks</div>
     <div class="platform-chip soon">🔜 More coming</div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="trust-grid">
+    <div>
+      <div class="section-label">Trust &amp; Privacy</div>
+      <h2 class="trust-title">Your money history stays on your phone.</h2>
+      <p class="trust-copy">ZivaPay+ uses EcoCash and InnBucks transaction SMS to organise your money history on your device. No bank login, no wallet connection, and no cloud sync of your transaction history.</p>
+    </div>
+    <div class="trust-points">
+      <div class="trust-point">
+        <span>🔒</span>
+        <div>
+          <strong>On-device by design</strong>
+          <p>Your transaction history is processed locally on your phone, not uploaded to a ZivaPay+ account.</p>
+        </div>
+      </div>
+      <div class="trust-point">
+        <span>📵</span>
+        <div>
+          <strong>No bank login or wallet connection</strong>
+          <p>ZivaPay+ reads supported transaction alerts. It cannot move money or access your mobile money account.</p>
+        </div>
+      </div>
+      <div class="trust-point">
+        <span>🛠️</span>
+        <div>
+          <strong>Diagnostics are separate</strong>
+          <p>App diagnostics may help us fix crashes and improve reliability, but your SMS money history is not cloud-synced.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="section-label">How it works</div>
+  <div class="section-title">From SMS permission to a clear money picture in minutes</div>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-number">01</div>
+      <h3>Install ZivaPay+</h3>
+      <p>Download the app from Google Play and open it on the phone that receives your EcoCash and InnBucks messages.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">02</div>
+      <h3>Allow SMS access</h3>
+      <p>SMS access lets ZivaPay+ read supported transaction alerts so it can build your history automatically.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">03</div>
+      <h3>See your money clearly</h3>
+      <p>Your balances, spending, categories, exports, and requests appear without manual entry or spreadsheets.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="proof">
+  <div class="proof-grid">
+    <div class="proof-item">
+      <div class="proof-value">🇿🇼</div>
+      <div class="proof-label">Built for Zimbabwean mobile money users</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-value">2</div>
+      <div class="proof-label">Live platforms: EcoCash and InnBucks</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-value">Play</div>
+      <div class="proof-label">Available on Google Play for Android</div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-value">0</div>
+      <div class="proof-label">Bank logins or wallet connections required</div>
+    </div>
   </div>
 </section>
 
@@ -678,4 +900,7 @@
     <a href="terms.html">Terms</a>
     <a href="mailto:hello@zivapayplus.com">Contact</a>
   </div>
-  <div style="font-size:0.8rem;">© 2026 ZivaPay+. All rights res
+  <div style="font-size:0.8rem;">© 2026 ZivaPay+. All rights reserved.</div>
+</footer>
+</body>
+</html>
