@@ -264,6 +264,11 @@ h1 em {
   filter: drop-shadow(0 26px 34px rgba(0,0,0,.5));
   transition: opacity .18s ease, transform .25s ease;
 }
+#path-image.request-flow {
+  width: 155%;
+  max-width: none;
+  max-height: 540px;
+}
 #path-image.is-switching { opacity: 0; transform: translateY(10px) scale(.98); }
 .stage-note {
   position: absolute;
@@ -522,6 +527,7 @@ footer > p { margin: 0; font-size: .66rem; }
   .path-button strong { font-size: .72rem; }
   .path-stage { min-height: 500px; }
   #path-image { width: 70%; max-height: 440px; }
+  #path-image.request-flow { width: 188%; max-height: 470px; }
   .stage-note { left: 13px; right: 13px; bottom: 13px; }
   .market-ribbon { align-items: flex-start; flex-direction: column; padding: 18px 0 22px; }
   .section-heading h2, .privacy-intro h2, .faq-intro h2, .story-copy h2 { font-size: clamp(2.6rem, 12vw, 4.1rem); }

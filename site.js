@@ -21,11 +21,12 @@ const paths = {
     copy: "Review the numbers, then export a clean PDF or Excel statement.",
   },
   request: {
-    image: "./screen-alerts.png",
-    alt: "ZivaPay+ notification settings",
-    kicker: "STAY AWARE",
-    title: "Notice what matters without watching all day.",
-    copy: "Confirm matching payments and choose the alerts that help you stay aware.",
+    image: "./request-money-screens.png",
+    alt: "ZivaPay+ Request Money flow showing create, share and payment confirmation screens",
+    kicker: "REQUEST MONEY",
+    title: "Ask once. Confirm when it lands.",
+    copy: "Create and share a request, then confirm a matching payment before it is marked paid.",
+    display: "request-flow",
   },
 };
 
@@ -47,6 +48,7 @@ function selectPath(button) {
 
   pathImage.classList.add("is-switching");
   window.setTimeout(() => {
+    pathImage.classList.toggle("request-flow", path.display === "request-flow");
     pathImage.src = path.image;
     pathImage.alt = path.alt;
     pathKicker.textContent = path.kicker;
