@@ -145,11 +145,11 @@ img { display: block; max-width: 100%; }
 .eyebrow.light { color: var(--yellow); }
 .hero .eyebrow { color: #a9d8b7; display: flex; align-items: center; gap: 10px; }
 .flag-mark {
-  width: 25px;
+  width: 32px;
   height: 16px;
+  object-fit: cover;
   border: 1px solid rgba(255,255,255,.35);
   border-radius: 2px;
-  background: linear-gradient(to bottom, #219653 0 14%, #f7cf2d 14% 28%, #df3b35 28% 42%, #111 42% 58%, #df3b35 58% 72%, #f7cf2d 72% 86%, #219653 86%);
 }
 h1, h2, h3, p { margin-top: 0; }
 h1 {
