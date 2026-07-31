@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="See EcoCash and InnBucks clearly in one app. Your money data stays on your phone. Free on Google Play."/>
   <meta name="twitter:image" content="https://zivapayplus.com/og-image.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
   <style>
     :root {
       --green: #006400;
@@ -386,25 +386,109 @@
     }
     .feature-card p { font-size: 0.92rem; color: var(--grey); line-height: 1.6; }
 
-    /* SCREENSHOTS */
+    /* WHAT'S NEW */
+    .updates { padding: 100px 80px; background: var(--bg); }
+    .release-card {
+      max-width: 1180px; margin: 0 auto;
+      display: grid; grid-template-columns: 0.72fr 1.6fr; gap: 56px;
+      padding: 48px; border-radius: 30px;
+      background: linear-gradient(135deg, var(--green) 0%, #003d00 100%);
+      color: white; position: relative; overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,70,0,0.18);
+    }
+    .release-card::after {
+      content: ''; position: absolute; width: 360px; height: 360px;
+      right: -160px; top: -190px; border-radius: 50%;
+      border: 64px solid rgba(255,255,255,0.05); pointer-events: none;
+    }
+    .release-kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 13px; border-radius: 100px;
+      background: rgba(255,210,0,0.14); color: var(--yellow);
+      border: 1px solid rgba(255,210,0,0.35);
+      font-size: 0.76rem; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; margin-bottom: 22px;
+    }
+    .release-intro h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.08;
+      letter-spacing: -1.4px; margin-bottom: 16px;
+    }
+    .release-intro p { color: rgba(255,255,255,0.68); line-height: 1.7; }
+    .release-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-self: stretch; }
+    .release-item {
+      position: relative; z-index: 1;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px; padding: 24px 20px;
+    }
+    .release-icon { font-size: 1.65rem; margin-bottom: 18px; }
+    .release-item h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; margin-bottom: 9px; }
+    .release-item p { color: rgba(255,255,255,0.64); font-size: 0.86rem; line-height: 1.55; }
+
+    /* INTERACTIVE DEMO */
     .screenshots {
       padding: 100px 80px; background: var(--dark); overflow: hidden;
     }
     .screenshots .section-label { color: var(--yellow); }
     .screenshots .section-title { color: white; }
-    .screens-scroll {
-      display: flex; gap: 24px; overflow-x: auto;
-      padding-bottom: 20px; scrollbar-width: none; margin-top: 48px;
+    .demo-radio { position: absolute; opacity: 0; pointer-events: none; }
+    .demo-shell {
+      max-width: 1080px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 0.82fr; gap: 72px; align-items: center;
     }
-    .screens-scroll::-webkit-scrollbar { display: none; }
-    .screen-item { flex-shrink: 0; text-align: center; }
-    .screen-item img {
-      width: 230px; height: auto;
-      filter: drop-shadow(0 18px 38px rgba(0,0,0,0.45));
-      transition: transform 0.3s;
+    .demo-copy .section-title { margin-bottom: 22px; }
+    .demo-lede { color: rgba(255,255,255,0.58); line-height: 1.7; max-width: 520px; margin-bottom: 34px; }
+    .demo-tabs { display: grid; gap: 12px; }
+    .demo-tab {
+      display: grid; grid-template-columns: 42px 1fr; gap: 15px; align-items: center;
+      padding: 17px 18px; border-radius: 16px; cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.035);
+      transition: background .2s, border-color .2s, transform .2s;
     }
-    .screen-item img:hover { transform: scale(1.04) translateY(-6px); }
-    .screen-label { color: rgba(255,255,255,0.5); font-size: 0.82rem; margin-top: 16px; }
+    .demo-tab:hover { transform: translateX(4px); border-color: rgba(255,210,0,0.45); }
+    .demo-number {
+      width: 42px; height: 42px; border-radius: 50%;
+      display: grid; place-items: center; font-weight: 700; font-size: .82rem;
+      color: var(--yellow); background: rgba(255,210,0,0.1);
+    }
+    .demo-tab strong { display: block; color: white; font-family: 'Plus Jakarta Sans', sans-serif; font-size: .95rem; }
+    .demo-tab span:last-child { display: block; color: rgba(255,255,255,.48); font-size: .8rem; margin-top: 3px; }
+    .demo-stage { position: relative; min-height: 610px; display: grid; place-items: center; }
+    .demo-stage::before {
+      content: ''; position: absolute; width: 440px; height: 440px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,210,0,.13), transparent 68%);
+    }
+    .demo-screen {
+      display: none; position: relative; z-index: 1;
+      width: 286px; height: auto; border-radius: 28px;
+      filter: drop-shadow(0 26px 45px rgba(0,0,0,.48));
+      animation: demoIn .35s ease both;
+    }
+    @keyframes demoIn { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
+    #demo-home:checked ~ .demo-shell .demo-screen-home,
+    #demo-transactions:checked ~ .demo-shell .demo-screen-transactions,
+    #demo-analytics:checked ~ .demo-shell .demo-screen-analytics
+    { display: block; }
+    #demo-home:checked ~ .demo-shell label[for="demo-home"],
+    #demo-transactions:checked ~ .demo-shell label[for="demo-transactions"],
+    #demo-analytics:checked ~ .demo-shell label[for="demo-analytics"]
+    {
+      background: rgba(255,255,255,.1); border-color: rgba(255,210,0,.55);
+    }
+
+    /* DOWNLOAD QR */
+    .download-options {
+      display: flex; justify-content: center; align-items: center; gap: 34px;
+      margin: 0 auto; width: fit-content;
+    }
+    .download-divider { width: 1px; height: 86px; background: rgba(0,0,0,.1); }
+    .download-qr { display: flex; align-items: center; gap: 14px; text-align: left; }
+    .download-qr img {
+      width: 112px; height: 112px; padding: 8px; background: white;
+      border-radius: 14px; box-shadow: 0 10px 30px rgba(0,70,0,.12);
+    }
+    .download-qr strong { display: block; color: var(--dark); font-size: .92rem; margin-bottom: 4px; }
+    .download-qr span { display: block; color: var(--grey); font-size: .78rem; line-height: 1.45; max-width: 120px; }
 
     /* WALLET TEASER */
     .wallet {
@@ -617,6 +701,9 @@
       .phone-right { right: -90px; }
       .features { padding: 60px 24px; }
       .features-grid { grid-template-columns: 1fr; }
+      .updates { padding: 60px 24px; }
+      .release-card { grid-template-columns: 1fr; gap: 32px; padding: 34px; }
+      .release-list { grid-template-columns: 1fr; }
       .trust { padding: 60px 24px; }
       .trust-grid { grid-template-columns: 1fr; }
       .how-it-works { padding: 60px 24px; }
@@ -624,6 +711,9 @@
       .proof { padding: 32px 24px; }
       .proof-grid { grid-template-columns: 1fr 1fr; }
       .screenshots { padding: 60px 24px; }
+      .demo-shell { grid-template-columns: 1fr; gap: 38px; }
+      .demo-stage { min-height: 520px; }
+      .demo-screen { width: 250px; }
       .wallet { padding: 60px 24px; }
       .download { padding: 60px 24px; }
       .platforms { padding: 32px 24px; }
@@ -634,6 +724,11 @@
     @media (max-width: 500px) {
       .hero-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
       .proof-grid { grid-template-columns: 1fr; }
+      .release-card { padding: 28px 22px; border-radius: 24px; }
+      .demo-stage { min-height: 465px; }
+      .demo-screen { width: 220px; border-radius: 22px; }
+      .download-options { display: block; }
+      .download-divider, .download-qr { display: none; }
     }
     /* FAQ */
     .faq { padding: 100px 24px; background: white; }
@@ -811,7 +906,7 @@
     </div>
     <div class="feature-card">
       <div class="feature-icon">🔍</div>
-      <h3>Search & Filter</h3>
+      <h3>Search &amp; Filter</h3>
       <p>Find any transaction instantly. Filter by this month, last month, or search by name or amount.</p>
     </div>
     <div class="feature-card">
@@ -831,7 +926,7 @@
     </div>
     <div class="feature-card">
       <div class="feature-icon">📄</div>
-      <h3>PDF & Excel Export</h3>
+      <h3>PDF &amp; Excel Export</h3>
       <p>Generate bank-style statements for any month. Share as PDF or Excel — perfect for budgeting and records.</p>
     </div>
     <div class="feature-card">
@@ -842,28 +937,65 @@
   </div>
 </section>
 
-<!-- SCREENSHOTS -->
-<section class="screenshots">
-  <div class="section-label">App Screenshots</div>
-  <div class="section-title">See it in action</div>
-<div class="screens-scroll">
-  <div class="screen-item">
-    <img src="./screen-home.png" alt="ZivaPay+ home dashboard with balance and recent transactions"/>
-    <div class="screen-label">Home Dashboard</div>
+<!-- WHAT'S NEW -->
+<section class="updates" id="updates" aria-labelledby="updates-title">
+  <div class="release-card">
+    <div class="release-intro">
+      <div class="release-kicker">New in v1.8.2 · July 2026</div>
+      <h2 id="updates-title">A clearer, safer money picture.</h2>
+      <p>The latest release makes Financial Health easier to understand, recognises more real-world wallet messages, and gives you more control when helping us improve a missed format.</p>
+    </div>
+    <div class="release-list">
+      <article class="release-item">
+        <div class="release-icon">💚</div>
+        <h3>Financial Health</h3>
+        <p>See your buffer, spending rhythm and monthly direction in plain language — never as a credit score.</p>
+      </article>
+      <article class="release-item">
+        <div class="release-icon">🧾</div>
+        <h3>More formats understood</h3>
+        <p>Expanded EcoCash and InnBucks coverage includes payroll payments and withdrawal reversals.</p>
+      </article>
+      <article class="release-item">
+        <div class="release-icon">🛡️</div>
+        <h3>Safer format reports</h3>
+        <p>Names, numbers and amounts are masked before sharing, with a preview showing exactly what will leave your phone.</p>
+      </article>
+    </div>
   </div>
-  <div class="screen-item">
-    <img src="./screen-transactions.png" alt="ZivaPay+ transactions list"/>
-    <div class="screen-label">Transactions</div>
+</section>
+
+<!-- INTERACTIVE DEMO -->
+<section class="screenshots" id="demo">
+  <input class="demo-radio" type="radio" name="demo-screen" id="demo-home" checked/>
+  <input class="demo-radio" type="radio" name="demo-screen" id="demo-transactions"/>
+  <input class="demo-radio" type="radio" name="demo-screen" id="demo-analytics"/>
+  <div class="demo-shell">
+    <div class="demo-copy">
+      <div class="section-label">See it in action</div>
+      <div class="section-title">From wallet messages to a useful money picture.</div>
+      <p class="demo-lede">Tap through the three views you will use most. Everything is organised automatically from supported EcoCash and InnBucks transaction messages.</p>
+      <div class="demo-tabs" aria-label="Choose an app screen to preview">
+        <label class="demo-tab" for="demo-home">
+          <span class="demo-number">01</span>
+          <span><strong>See everything together</strong><span>Balances, spending and Financial Health at a glance.</span></span>
+        </label>
+        <label class="demo-tab" for="demo-transactions">
+          <span class="demo-number">02</span>
+          <span><strong>Find any transaction</strong><span>Search one clean history instead of scrolling through messages.</span></span>
+        </label>
+        <label class="demo-tab" for="demo-analytics">
+          <span class="demo-number">03</span>
+          <span><strong>Understand your month</strong><span>See categories, inflow and outflow, then export your records.</span></span>
+        </label>
+      </div>
+    </div>
+    <div class="demo-stage" aria-live="polite">
+      <img class="demo-screen demo-screen-home" src="./screen-home.png" alt="ZivaPay+ home dashboard showing balances and spending"/>
+      <img class="demo-screen demo-screen-transactions" src="./screen-transactions.png" alt="ZivaPay+ searchable transaction history"/>
+      <img class="demo-screen demo-screen-analytics" src="./screen-analytics.png" alt="ZivaPay+ monthly analytics and export options"/>
+    </div>
   </div>
-  <div class="screen-item">
-    <img src="./screen-analytics.png" alt="ZivaPay+ analytics with export to PDF and Excel"/>
-    <div class="screen-label">Analytics &amp; Export</div>
-  </div>
-  <div class="screen-item">
-    <img src="./screen-alerts.png" alt="ZivaPay+ spending alerts settings"/>
-    <div class="screen-label">Spending Alerts</div>
-  </div>
-</div>
 </section>
 
 <!-- ROADMAP -->
@@ -941,7 +1073,7 @@
       </details>
       <details class="faq-item">
         <summary>Is my information private? Where is it kept?</summary>
-        <p>Your transaction history stays on your phone — it's never uploaded to a ZivaPay+ account or synced to the cloud. We use anonymous diagnostics to fix crashes and improve the app, but never your balances or transaction details.</p>
+        <p>Your transaction history stays on your phone — it's never uploaded to a ZivaPay+ account or synced to the cloud. Limited crash and usage diagnostics help us improve reliability, but never include SMS bodies, amounts, balances, names or phone numbers.</p>
       </details>
       <details class="faq-item">
         <summary>Why does ZivaPay+ ask for access?</summary>
@@ -968,9 +1100,16 @@
   <div class="section-label">Download</div>
   <h2>Get ZivaPay<span>+</span> Free</h2>
   <p>Available now on Android.</p>
-  <a href="https://play.google.com/store/apps/details?id=com.nyoniedwin.zimpayplus.app" class="play-badge-link" style="margin:0 auto;" aria-label="Get ZivaPay+ on Google Play">
-    <img class="play-badge play-badge-lg" src="./google-play-badge.png" alt="Get it on Google Play"/>
-  </a>
+  <div class="download-options">
+    <a href="https://play.google.com/store/apps/details?id=com.nyoniedwin.zimpayplus.app" class="play-badge-link" aria-label="Get ZivaPay+ on Google Play">
+      <img class="play-badge play-badge-lg" src="./google-play-badge.png" alt="Get it on Google Play"/>
+    </a>
+    <div class="download-divider" aria-hidden="true"></div>
+    <div class="download-qr">
+      <img src="./play-store-qr.png" alt="QR code linking to ZivaPay+ on Google Play"/>
+      <div><strong>Scan to install</strong><span>Point your phone camera at the code.</span></div>
+    </div>
+  </div>
   <p class="download-disclaimer">ZivaPay+ is an independent app and is not affiliated with or endorsed by any mobile money operator. All trademarks belong to their respective owners.</p>
 </section>
 
