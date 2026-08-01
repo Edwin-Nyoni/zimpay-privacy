@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=1200, initial-scale=1"/>
+  <meta name="robots" content="noindex"/>
+  <title>ZivaPay+ social card source</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&amp;family=Newsreader:opsz,wght@6..72,500&amp;display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; }
+    body { width: 1200px; height: 630px; margin: 0; overflow: hidden; color: #fff; background: #082315; font-family: "Manrope", sans-serif; }
+    .card { width: 100%; height: 100%; padding: 62px 70px; display: grid; grid-template-columns: 1.08fr .75fr; gap: 60px; position: relative; isolation: isolate; overflow: hidden; background: radial-gradient(circle at 15% 15%, rgba(247,207,45,.16), transparent 25%), linear-gradient(137deg, #061d11, #0b4827 62%, #082315); }
+    .card::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .16; background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 62px 62px; mask-image: linear-gradient(120deg, #000, transparent 75%); }
+    .card::after { content: "ZW"; position: absolute; right: -20px; bottom: -95px; z-index: -1; color: rgba(255,255,255,.035); font-size: 390px; font-weight: 800; letter-spacing: -.13em; }
+    .copy { display: flex; flex-direction: column; position: relative; z-index: 2; }
+    .brand { font-size: 35px; font-weight: 800; letter-spacing: -.06em; }
+    .brand span { color: #df3b35; }
+    .eyebrow { margin: auto 0 18px; display: flex; align-items: center; gap: 12px; color: #f7cf2d; font-size: 14px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+    .eyebrow img { width: 30px; height: 20px; object-fit: cover; }
+    h1 { margin: 0; max-width: 660px; font-size: 72px; line-height: .91; letter-spacing: -.07em; }
+    h1 em { color: #f7cf2d; font-family: "Newsreader", serif; font-weight: 500; }
+    .sub { margin: 24px 0 0; max-width: 590px; color: rgba(255,255,255,.68); font-size: 18px; line-height: 1.5; }
+    .phone-stage { align-self: center; height: 510px; display: grid; place-items: center; position: relative; border: 1px solid rgba(255,255,255,.12); border-radius: 36px; background: rgba(255,255,255,.055); box-shadow: 0 35px 80px rgba(0,0,0,.3); }
+    .phone-stage::before { content: "PRIVATE ON DEVICE"; position: absolute; top: 25px; left: 28px; color: rgba(255,255,255,.48); font-size: 10px; font-weight: 800; letter-spacing: .12em; }
+    .phone-stage img { width: 255px; max-height: 435px; margin-top: 42px; object-fit: contain; filter: drop-shadow(0 28px 28px rgba(0,0,0,.28)); }
+    .assurance { position: absolute; right: 24px; bottom: 22px; padding: 9px 13px; color: #082315; border-radius: 999px; background: #f7cf2d; font-size: 11px; font-weight: 800; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <section class="copy">
+      <div class="brand">ZivaPay<span>+</span></div>
+      <p class="eyebrow"><img src="./flag-zimbabwe.svg" alt=""/> Built in Zimbabwe</p>
+      <h1>Your money story.<br><em>Finally clear.</em></h1>
+      <p class="sub">Supported EcoCash and InnBucks activity, organised privately on your Android phone.</p>
+    </section>
+    <section class="phone-stage" aria-label="ZivaPay+ home screen">
+      <img src="./screen-home.png" alt=""/>
+      <span class="assurance">FREE ON ANDROID</span>
+    </section>
+  </main>
+</body>
+</html>
