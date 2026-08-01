@@ -30,6 +30,31 @@ const paths = {
   },
 };
 
+// Carry only campaign labels into Google Play. No visitor identifier, cookie,
+// local storage, or website interaction history is collected here.
+const campaignValue = (value, fallback) => {
+  if (!value) return fallback;
+  const cleaned = value.toLowerCase().replace(/[^a-z0-9_-]+/g, "_").replace(/^_+|_+$/g, "");
+  return cleaned.slice(0, 48) || fallback;
+};
+
+const incomingCampaign = new URLSearchParams(window.location.search);
+const campaign = campaignValue(incomingCampaign.get("utm_campaign"), "website_launch");
+const incomingContent = campaignValue(incomingCampaign.get("utm_content"), "");
+
+document.querySelectorAll("[data-play-placement]").forEach((link) => {
+  const destination = new URL(link.href);
+  const content = incomingContent || campaignValue(link.dataset.playPlacement, "website");
+  const referrer = new URLSearchParams({
+    utm_source: "zivapayplus.com",
+    utm_medium: "website",
+    utm_campaign: campaign,
+    utm_content: content,
+  });
+  destination.searchParams.set("referrer", referrer.toString());
+  link.href = destination.toString();
+});
+
 const pathButtons = document.querySelectorAll(".path-button");
 const pathImage = document.querySelector("#path-image");
 const pathKicker = document.querySelector("#path-kicker");
