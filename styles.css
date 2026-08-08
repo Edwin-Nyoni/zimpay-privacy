@@ -562,6 +562,7 @@ h1 em {
 .update-body > p:not(.update-kicker, .update-note) { max-width: 780px; color: var(--muted); font-size: .9rem; line-height: 1.8; }
 .update-next { padding-block: 90px; }
 .update-points { margin-top: 50px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.update-points-four { grid-template-columns: repeat(2, 1fr); }
 .update-points section { min-height: 270px; padding: 25px; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 20px; background: var(--cream); }
 .update-points span { color: var(--red); font: 600 .64rem "DM Mono", monospace; }
 .update-points h3 { margin: auto 0 13px; font-size: 1.23rem; line-height: 1.08; letter-spacing: -.04em; }
