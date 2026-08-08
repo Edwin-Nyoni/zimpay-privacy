@@ -248,7 +248,7 @@ h1 em {
 .path-button strong { display: block; margin-bottom: 6px; font-size: .88rem; }
 .path-button small { display: block; color: rgba(255,255,255,.42); font-size: .7rem; line-height: 1.45; }
 .path-stage { min-width: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; overflow: hidden; }
-.stage-visual { min-height: 0; position: relative; display: grid; place-items: center; overflow: hidden; }
+.stage-visual { width: 100%; min-height: 0; position: relative; display: grid; place-items: center; justify-self: stretch; overflow: hidden; }
 .stage-halo {
   position: absolute;
   width: 440px;
@@ -259,6 +259,7 @@ h1 em {
 #path-image {
   position: relative;
   z-index: 1;
+  justify-self: center;
   width: min(295px, 70%);
   max-height: 100%;
   object-fit: contain;
