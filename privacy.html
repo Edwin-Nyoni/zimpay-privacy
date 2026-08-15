@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://zivapayplus.com/privacy.html"/>
   <meta name="theme-color" content="#006400"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
   <style>
     :root {
       --green: #006400;
@@ -160,14 +160,14 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">Last updated: June 2026</div>
+  <div class="hero-badge">Last updated: 15 August 2026</div>
   <h1>Privacy <span>Policy</span></h1>
-  <p>ZivaPay+ — your mobile money messages stay on your device.</p>
+  <p>ZivaPay+ — your detailed money history stays on your device unless you choose to share it.</p>
 </section>
 
 <!-- SUMMARY -->
 <div class="summary">
-  <p><strong>Short version:</strong> ZivaPay+ reads your mobile money messages <strong>only on your phone</strong> — the message content and your transactions never leave your device and are never sent to us or anyone else. To keep the app stable and improve it, we use Google Firebase to collect anonymous app-usage and crash information that <strong>never includes your messages, balances, or transaction amounts</strong>. There are no ads, and no advertising ID.</p>
+  <p><strong>Short version:</strong> ZivaPay+ reads and organises supported mobile money messages <strong>on your phone</strong>. It does not automatically upload your message content, transaction amounts, balances, names, or phone numbers. To keep the App stable and understand whether features work, Google Firebase receives limited <strong>pseudonymous</strong> usage and crash diagnostics linked to one installation. Detailed information leaves only when you deliberately share a request, export, report, or masked message preview. There are no ads and no advertising ID.</p>
 </div>
 
 <!-- CONTENT -->
@@ -175,7 +175,7 @@
 
   <div class="section">
     <h2>1. Introduction</h2>
-    <p>ZivaPay+ ("the App", "we", "us") is a personal finance tool that helps you track your mobile money transactions automatically. This Privacy Policy explains what the App accesses, what it keeps on your device, and the limited, anonymous information we use to keep the App working well. We are committed to protecting your privacy — by design, not just by policy.</p>
+    <p>ZivaPay+ ("the App", "we", "us") is a personal finance tool that helps you track your mobile money transactions automatically. This Privacy Policy explains what the App accesses, what it keeps on your device, what you can choose to share, and the limited pseudonymous diagnostics used to keep the App working well. We are committed to protecting your privacy — by design, not just by policy.</p>
     <p>The App is operated by Neyoni Technologies (Pvt) Ltd, Zimbabwe.</p>
   </div>
 
@@ -186,7 +186,7 @@
       <li><strong>SMS messages</strong> — the App reads mobile money confirmation messages (e.g. EcoCash, InnBucks) on your phone to display your transaction history, balances, and spending summaries. It looks only for these financial messages; ordinary personal texts are ignored.</li>
       <li><strong>Notifications</strong> — to show spending alerts and reminders you choose to enable in the App.</li>
     </ul>
-    <p>This information is processed <strong>entirely on your device</strong> and is not transmitted to us.</p>
+    <p>The content of these messages and the detailed transaction values extracted from them are processed <strong>on your device</strong> and are not uploaded automatically. Section 5 describes the limited activity and diagnostic signals sent to Firebase.</p>
   </div>
 
   <div class="section">
@@ -195,36 +195,44 @@
       <li>Your mobile money messages are read and analysed <strong>on your device only</strong>.</li>
       <li>The resulting transaction data is used to display your history, balances, analytics, and money-tracking features inside the App.</li>
       <li>Exported reports (PDF / Excel) are generated on your device and are shared only when <strong>you</strong> choose to export and share them.</li>
+      <li>If the App cannot read a supported wallet message, you may choose to preview and send an automatically masked copy to the developer. Section 6 explains this voluntary path.</li>
       <li>Notifications and reminders are generated locally based on settings you choose.</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>4. Where Your Data Is Stored</h2>
-    <p>Your messages and transaction records are stored in a private database <strong>on your device</strong>. We do <strong>not</strong> upload, back up, or store your transactions, balances, or message content on any server or in the cloud.</p>
+    <p>Your messages and transaction records are stored in a private database <strong>on your device</strong>. We do <strong>not automatically</strong> upload, back up, or store your transactions, balances, or message content on any ZivaPay+ server or in the cloud. Information can leave through a share action that you deliberately start, as described in Section 6.</p>
     <p>You stay in control: clearing the App's data or uninstalling the App permanently removes all of this on-device information.</p>
   </div>
 
   <div class="section">
     <h2>5. Analytics &amp; Crash Reporting (Google Firebase)</h2>
-    <p>To keep the App stable and understand which features are useful, the App uses <strong>Google Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong>. These collect limited, anonymous information:</p>
+    <p>To keep the App stable and understand whether features work, the App uses <strong>Google Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong>. These collect limited, pseudonymous information:</p>
     <ul>
-      <li><strong>App-interaction events</strong> — e.g. which screens are opened and which features are used, in a general (grouped) form.</li>
+      <li><strong>App-interaction events</strong> — for example which features are opened, whether a transaction scan ingested new records, which supported wallets are present, balance-data age ranges, and money-request lifecycle steps. These carry no amount, balance, name, phone number, or message content.</li>
+      <li><strong>Unread-format diagnostics</strong> — a known wallet-service label, wallet type, and a shape-only fingerprint in which letter runs and digit runs are replaced before hashing. The SMS body itself is not sent through automatic analytics.</li>
       <li><strong>Crash logs &amp; diagnostics</strong> — technical details about errors and your device (such as device model and Android version) that help us fix problems.</li>
       <li><strong>A device identifier</strong> used by Firebase to group events from the same installation.</li>
     </ul>
-    <p>This information <strong>never includes the content of your messages, your contacts, your balances, or your transaction amounts</strong>. The App does <strong>not</strong> use an advertising ID, does not show ads, and does not work with any ad networks. This Firebase data is processed by Google as our service provider, in line with Google's privacy terms.</p>
+    <p>This information does <strong>not</strong> include the content of your messages, your contacts, your balances, your transaction amounts, counterparty names, or wallet phone numbers. Financial-health scores, bands, coaching factors, savings-rate bands, runway bands, and spending-direction signals are not sent. Because Firebase uses an installation identifier, these diagnostics are <strong>pseudonymous rather than anonymous</strong>. The App does <strong>not</strong> use an advertising ID, does not show ads, and does not work with any ad networks. Firebase data is processed by Google as our service provider, in line with Google's privacy terms.</p>
   </div>
 
   <div class="section">
     <h2>6. Data Sharing</h2>
-    <p>We do <strong>not</strong> sell, rent, or trade your personal data. Your mobile money messages and transaction records never leave your device.</p>
-    <p>The only information shared with a third party is the anonymous analytics and crash-diagnostic data described in Section 5, which is sent to Google Firebase to keep the App working and improving. We may also disclose information if required to do so by law.</p>
+    <p>We do <strong>not</strong> sell, rent, or trade your personal data. Your detailed money history is not transmitted automatically.</p>
+    <p>Information leaves the device in two circumstances:</p>
+    <ul>
+      <li><strong>Automatic diagnostics</strong> — the pseudonymous Firebase information described in Section 5.</li>
+      <li><strong>Actions you deliberately start</strong> — sharing a money request, exporting a PDF or Excel statement, sharing a Financial Health report, inviting someone to the App, or sending an unreadable-message report to the developer.</li>
+    </ul>
+    <p>An unreadable-message report is voluntary and per-message. Before anything opens in WhatsApp, email, or another share destination, the App shows the exact outgoing payload. Every digit is replaced, likely identity words are masked on a best-effort basis, and unknown or personal senders become a constant label. Masking is not guaranteed to identify every possible name, so you should cancel if anything in the preview looks personal. The preview is deliberately not editable because hiding individual words previously removed the transaction-direction clues needed to support new formats. Your choice is to send the exact preview or cancel.</p>
+    <p>We may also disclose information if required to do so by law.</p>
   </div>
 
   <div class="section">
     <h2>7. Third-Party Services</h2>
-    <p>The App uses Google Firebase (Analytics and Crashlytics) for anonymous usage statistics and crash reporting. It does <strong>not</strong> integrate any advertising networks or ad-tracking services, and there are no ads in ZivaPay+.</p>
+    <p>The App uses Google Firebase Analytics, Crashlytics, and Remote Config for pseudonymous usage statistics, crash reporting, and feature configuration. It does <strong>not</strong> integrate any advertising networks or ad-tracking services, and there are no ads in ZivaPay+.</p>
   </div>
 
   <div class="section">
@@ -232,10 +240,11 @@
     <ul>
       <li><strong>READ_SMS</strong> — required to read mobile money confirmation messages. Without it, the App cannot track your transactions.</li>
       <li><strong>POST_NOTIFICATIONS</strong> — to deliver the spending alerts and reminders you enable. You can turn these off any time in your device settings.</li>
-      <li><strong>SCHEDULE_EXACT_ALARM</strong> — to deliver scheduled reminders and summaries at the right time.</li>
       <li><strong>RECEIVE_BOOT_COMPLETED</strong> — to restore your scheduled reminders after your phone restarts.</li>
       <li><strong>VIBRATE</strong> — for notification feedback only.</li>
+      <li><strong>INTERNET</strong> — used for Firebase diagnostics and Remote Config. It is not used to upload your detailed transaction history.</li>
     </ul>
+    <p>The App does <strong>not</strong> request permission to send SMS and does <strong>not</strong> request exact-alarm permission.</p>
   </div>
 
   <div class="section">
@@ -245,7 +254,7 @@
     <ul>
       <li><strong>Access and review</strong> your transaction data at any time within the App.</li>
       <li><strong>Correct or remove</strong> records, or delete everything, by clearing the App's data or uninstalling it.</li>
-      <li><strong>Limit analytics</strong> by disabling usage and diagnostics collection in your device settings.</li>
+      <li><strong>Choose what to share</strong> by cancelling any request, export, report, or developer-message preview before it is handed to another App.</li>
     </ul>
     <p>For any data-protection question or request, contact us using the details in Section 12. The data controller is Neyoni Technologies (Pvt) Ltd, Zimbabwe.</p>
   </div>
@@ -257,7 +266,7 @@
 
   <div class="section">
     <h2>11. Security</h2>
-    <p>Your messages and transactions are kept on your device and protected by your device's own security (PIN, fingerprint, etc.). The anonymous analytics and crash data sent to Firebase is transmitted over encrypted connections. We recommend keeping your device locked and your software up to date.</p>
+    <p>Your messages and transactions are kept on your device and protected by your device's own security (PIN, fingerprint, etc.). The pseudonymous analytics and crash data sent to Firebase is transmitted over encrypted connections. We recommend keeping your device locked and your software up to date.</p>
   </div>
 
   <div class="section">
