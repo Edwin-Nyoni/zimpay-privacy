@@ -78,7 +78,38 @@
 
       <article class="update-entry update-next" id="next-release">
         <div class="update-rail">
-          <span class="update-state">NEXT ANDROID RELEASE</span>
+          <span class="update-state is-live">LIVE</span>
+          <time datetime="2026-09-05">5 SEP 2026</time>
+          <strong>v1.8.8+47</strong>
+        </div>
+        <div class="update-body">
+          <p class="update-kicker">Better transaction reading</p>
+          <h2>Card refunds are clearer, and missed-format reports are more useful.</h2>
+          <p>ZivaPay+ now reads another EcoCash card-refund format, helping refunds reduce spending correctly instead of being missed. Format Radar reports are also easier to read, so unsupported SMS formats can be improved faster.</p>
+          <div class="update-points">
+            <section>
+              <span>01</span>
+              <h3>EcoCash card refunds</h3>
+              <p>A newly reported card-refund SMS shape is now recognised as returned money, not ordinary income.</p>
+            </section>
+            <section>
+              <span>02</span>
+              <h3>Cleaner Format Radar reports</h3>
+              <p>Reports keep more of the message structure developers need while still masking private values before anything is sent.</p>
+            </section>
+            <section>
+              <span>03</span>
+              <h3>Small release, precise fix</h3>
+              <p>No new account, syncing or cloud workflow was added. The work stays focused on reading supported SMS formats more accurately.</p>
+            </section>
+          </div>
+          <p class="update-note">Released on Google Play as v1.8.8+47.</p>
+        </div>
+      </article>
+
+      <article class="update-entry">
+        <div class="update-rail">
+          <span class="update-state is-live">LIVE</span>
           <time datetime="2026-07-31">31 JUL 2026</time>
           <strong>v1.8.2+41</strong>
         </div>
@@ -103,7 +134,6 @@
               <p>Long inbox gaps are read page by page instead of relying on one fixed newest-message window.</p>
             </section>
           </div>
-          <p class="update-note">Status matters: this build is prepared, not labelled live until the Google Play rollout is complete.</p>
         </div>
       </article>
 
